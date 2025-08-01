@@ -108,46 +108,86 @@ function setupNavigation() {
     window.addEventListener('scroll', debounce(updateActiveNavOnScroll, 100));
 }
 
-// Setup Typing Animation
+// Setup Heavy Spider-Verse Typing Animation
 function setupTypingAnimation() {
     const typingElement = document.querySelector('.typing-text');
     if (!typingElement) return;
     
     const texts = [
-        'Tech Enthusiast 💻',
-        'Future Engineer 🚀',
-        'Content Creator 🎥',
-        'Problem Solver 🧩',
-        'Web Surfer 🌐',
-        'Learning Machine 📚'
+        '🕷️ SPIDER-DEV 🕸️',
+        '💻 TECH ENTHUSIAST 🚀',
+        '⚡ FUTURE ENGINEER 🔥',
+        '🎥 CONTENT CREATOR ✨',
+        '🧩 PROBLEM SOLVER 💡',
+        '🌐 WEB SURFER 🌊',
+        '📚 LEARNING MACHINE 🤖',
+        '🎮 CODE WARRIOR 🗡️'
     ];
     
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const pauseTime = 2000;
+    const typingSpeed = 80;
+    const deletingSpeed = 40;
+    const pauseTime = 1500;
     
     function typeText() {
         const currentText = texts[textIndex];
+        
+        // Add glitch effect during typing
+        if (Math.random() < 0.1) {
+            typingElement.style.animation = 'spiderGlitch 0.1s ease-in-out';
+            setTimeout(() => {
+                typingElement.style.animation = 'spiderTypewriter 3s steps(20) infinite, spiderGlow 2s ease-in-out infinite alternate, spiderGlitch 0.1s ease-in-out infinite';
+            }, 100);
+        }
         
         if (isDeleting) {
             typingElement.textContent = currentText.substring(0, charIndex - 1);
             charIndex--;
             
+            // Add deleting effect
+            typingElement.style.filter = `hue-rotate(${charIndex * 10}deg) brightness(${1 + charIndex * 0.02})`;
+            
             if (charIndex === 0) {
                 isDeleting = false;
                 textIndex = (textIndex + 1) % texts.length;
-                setTimeout(typeText, 500);
+                
+                // Reset filter
+                typingElement.style.filter = '';
+                
+                // Add transition effect
+                typingElement.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    typingElement.style.transform = 'scale(1)';
+                }, 200);
+                
+                setTimeout(typeText, 300);
                 return;
             }
         } else {
             typingElement.textContent = currentText.substring(0, charIndex + 1);
             charIndex++;
             
+            // Add typing glow effect
+            typingElement.style.textShadow = `
+                0 0 ${5 + charIndex}px var(--primary-color),
+                0 0 ${10 + charIndex * 2}px var(--secondary-color),
+                0 0 ${15 + charIndex * 3}px var(--accent-color)
+            `;
+            
             if (charIndex === currentText.length) {
                 isDeleting = true;
+                
+                // Add completion effect
+                typingElement.style.transform = 'scale(1.1)';
+                typingElement.style.filter = 'brightness(1.5) saturate(1.5)';
+                
+                setTimeout(() => {
+                    typingElement.style.transform = 'scale(1)';
+                    typingElement.style.filter = '';
+                }, 300);
+                
                 setTimeout(typeText, pauseTime);
                 return;
             }
@@ -156,8 +196,30 @@ function setupTypingAnimation() {
         setTimeout(typeText, isDeleting ? deletingSpeed : typingSpeed);
     }
     
-    // Start typing animation after a delay
-    setTimeout(typeText, 1000);
+    // Add initial spider-verse entrance effect
+    typingElement.style.opacity = '0';
+    typingElement.style.transform = 'scale(0.5) rotate(10deg)';
+    
+    setTimeout(() => {
+        typingElement.style.transition = 'all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        typingElement.style.opacity = '1';
+        typingElement.style.transform = 'scale(1) rotate(0deg)';
+        
+        setTimeout(() => {
+            typingElement.style.transition = '';
+            typeText();
+        }, 800);
+    }, 1000);
+    
+    // Add periodic glitch effects
+    setInterval(() => {
+        if (Math.random() < 0.3) {
+            typingElement.style.animation = 'spiderGlitch 0.2s ease-in-out';
+            setTimeout(() => {
+                typingElement.style.animation = 'spiderTypewriter 3s steps(20) infinite, spiderGlow 2s ease-in-out infinite alternate, spiderGlitch 0.1s ease-in-out infinite';
+            }, 200);
+        }
+    }, 3000);
 }
 
 // Setup Scroll Animations
@@ -305,37 +367,137 @@ function setupParticleEffects() {
     createSpiderWebEffect();
 }
 
-// Create floating particles
+// Create heavy Spider-Verse particles
 function createFloatingParticles() {
     const particleContainer = document.querySelector('.floating-particles');
     if (!particleContainer) return;
     
-    for (let i = 0; i < 20; i++) {
+    // Create more particles with Spider-Verse effects
+    for (let i = 0; i < 50; i++) {
         const particle = document.createElement('div');
-        particle.className = 'particle';
+        particle.className = 'spider-particle';
+        
+        const size = Math.random() * 6 + 3;
+        const colors = ['#ff1744', '#2196f3', '#ffc107'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
         particle.style.cssText = `
             position: absolute;
-            width: ${Math.random() * 4 + 2}px;
-            height: ${Math.random() * 4 + 2}px;
-            background: rgba(255, 23, 68, ${Math.random() * 0.5 + 0.2});
+            width: ${size}px;
+            height: ${size}px;
+            background: ${color};
             border-radius: 50%;
             left: ${Math.random() * 100}%;
             top: ${Math.random() * 100}%;
-            animation: floatParticle ${Math.random() * 10 + 5}s infinite linear;
-            animation-delay: ${Math.random() * 5}s;
+            box-shadow: 
+                0 0 ${size * 2}px ${color},
+                0 0 ${size * 4}px ${color},
+                inset 0 0 ${size}px rgba(255, 255, 255, 0.3);
+            animation: 
+                spiderParticleFloat ${Math.random() * 8 + 6}s infinite linear,
+                spiderParticleGlow ${Math.random() * 3 + 2}s infinite alternate;
+            animation-delay: ${Math.random() * 10}s;
+            z-index: 1;
         `;
         
         particleContainer.appendChild(particle);
     }
     
-    // Add particle animation keyframes
+    // Create web strands
+    for (let i = 0; i < 15; i++) {
+        const strand = document.createElement('div');
+        strand.className = 'web-strand';
+        
+        strand.style.cssText = `
+            position: absolute;
+            width: 1px;
+            height: ${Math.random() * 200 + 100}px;
+            background: linear-gradient(transparent, rgba(255, 23, 68, 0.3), transparent);
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            transform-origin: top;
+            animation: 
+                webStrandSway ${Math.random() * 4 + 3}s infinite ease-in-out,
+                webStrandGlow ${Math.random() * 2 + 1}s infinite alternate;
+            animation-delay: ${Math.random() * 5}s;
+        `;
+        
+        particleContainer.appendChild(strand);
+    }
+    
+    // Add enhanced particle animations
     const style = document.createElement('style');
     style.textContent = `
-        @keyframes floatParticle {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        @keyframes spiderParticleFloat {
+            0% { 
+                transform: translateY(100vh) translateX(0) rotate(0deg) scale(0);
+                opacity: 0;
+                filter: hue-rotate(0deg);
+            }
+            10% { 
+                opacity: 1;
+                transform: translateY(90vh) translateX(${Math.random() * 50 - 25}px) rotate(36deg) scale(1);
+            }
+            25% { 
+                filter: hue-rotate(90deg);
+                transform: translateY(75vh) translateX(${Math.random() * 100 - 50}px) rotate(90deg) scale(1.2);
+            }
+            50% { 
+                filter: hue-rotate(180deg);
+                transform: translateY(50vh) translateX(${Math.random() * 150 - 75}px) rotate(180deg) scale(1);
+            }
+            75% { 
+                filter: hue-rotate(270deg);
+                transform: translateY(25vh) translateX(${Math.random() * 100 - 50}px) rotate(270deg) scale(0.8);
+            }
+            90% { 
+                opacity: 1;
+                transform: translateY(10vh) translateX(${Math.random() * 50 - 25}px) rotate(324deg) scale(1);
+            }
+            100% { 
+                transform: translateY(-10vh) translateX(0) rotate(360deg) scale(0);
+                opacity: 0;
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        @keyframes spiderParticleGlow {
+            0% { 
+                filter: brightness(1) saturate(1);
+                transform: scale(1);
+            }
+            100% { 
+                filter: brightness(1.5) saturate(1.8);
+                transform: scale(1.3);
+            }
+        }
+        
+        @keyframes webStrandSway {
+            0%, 100% { 
+                transform: rotate(0deg) scaleY(1);
+                opacity: 0.3;
+            }
+            25% { 
+                transform: rotate(2deg) scaleY(1.1);
+                opacity: 0.6;
+            }
+            50% { 
+                transform: rotate(0deg) scaleY(1.2);
+                opacity: 0.8;
+            }
+            75% { 
+                transform: rotate(-2deg) scaleY(1.1);
+                opacity: 0.6;
+            }
+        }
+        
+        @keyframes webStrandGlow {
+            0% { 
+                box-shadow: 0 0 2px rgba(255, 23, 68, 0.3);
+            }
+            100% { 
+                box-shadow: 0 0 10px rgba(255, 23, 68, 0.8), 0 0 20px rgba(33, 150, 243, 0.4);
+            }
         }
     `;
     document.head.appendChild(style);
