@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRISH - Portfolio | Tech Enthusiast & Future Engineer</title>
+    <meta name="description" content="Portfolio of Krish - A passionate 11th grade PCM student, tech enthusiast, and aspiring engineer with skills in coding, video editing, and content creation.">
+    
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Material Components Web -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="spider-web"></div>
+        <div class="floating-particles"></div>
+        <div class="geometric-shapes"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="mdc-top-app-bar animated-navbar" id="navbar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <div class="logo-container">
+                    <span class="logo-text">KRISH</span>
+                    <div class="logo-underline"></div>
+                </div>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link" data-section="home">
+                        <span class="material-icons">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="material-icons">person</span>
+                        <span>About</span>
+                    </a>
+                    <a href="#skills" class="nav-link" data-section="skills">
+                        <span class="material-icons">code</span>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#music" class="nav-link" data-section="music">
+                        <span class="material-icons">library_music</span>
+                        <span>Music</span>
+                    </a>
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <span class="material-icons">work</span>
+                        <span>Projects</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="material-icons">contact_mail</span>
+                        <span>Contact</span>
+                    </a>
+                </div>
+                <button class="mdc-icon-button menu-toggle" id="menu-toggle">
+                    <span class="material-icons">menu</span>
+                </button>
+            </section>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-nav-link">
+                <span class="material-icons">home</span>
+                <span>Home</span>
+            </a>
+            <a href="#about" class="mobile-nav-link">
+                <span class="material-icons">person</span>
+                <span>About</span>
+            </a>
+            <a href="#skills" class="mobile-nav-link">
+                <span class="material-icons">code</span>
+                <span>Skills</span>
+            </a>
+            <a href="#music" class="mobile-nav-link">
+                <span class="material-icons">library_music</span>
+                <span>Music</span>
+            </a>
+            <a href="#projects" class="mobile-nav-link">
+                <span class="material-icons">work</span>
+                <span>Projects</span>
+            </a>
+            <a href="#contact" class="mobile-nav-link">
+                <span class="material-icons">contact_mail</span>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-letter">K</span>
+                    <span class="name-letter">R</span>
+                    <span class="name-letter">I</span>
+                    <span class="name-letter">S</span>
+                    <span class="name-letter">H</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    A passionate 11th-grade PCM student on a mission to become an engineer. 
+                    I'm a tech enthusiast who loves exploring the digital realm, creating content, 
+                    and bringing ideas to life through code and creativity.
+                </p>
+                <div class="hero-buttons">
+                    <button class="mdc-button mdc-button--raised animated-button primary-btn" id="explore-btn">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">
+                            <span class="material-icons">explore</span>
+                            Explore My Work
+                        </span>
+                    </button>
+                    <button class="mdc-button mdc-button--outlined animated-button secondary-btn" id="contact-btn">
+                        <div class="mdc-button__ripple"></div>
+                        <span class="mdc-button__label">
+                            <span class="material-icons">contact_mail</span>
+                            Get In Touch
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-right" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="hero-visual">
+                    <div class="spider-verse-container">
+                        <lottie-player
+                            src="https://assets10.lottiefiles.com/packages/lf20_khzniaya.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%; height: 100%;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-icon" style="animation-delay: 0s;">
+                            <span class="material-icons">code</span>
+                        </div>
+                        <div class="floating-icon" style="animation-delay: 0.5s;">
+                            <span class="material-icons">videocam</span>
+                        </div>
+                        <div class="floating-icon" style="animation-delay: 1s;">
+                            <span class="material-icons">photo_camera</span>
+                        </div>
+                        <div class="floating-icon" style="animation-delay: 1.5s;">
+                            <span class="material-icons">web</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <span class="material-icons">keyboard_arrow_down</span>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Discover my journey</div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-image-container">
+                        <div class="about-image">
+                            <lottie-player
+                                src="https://assets4.lottiefiles.com/packages/lf20_iv4dsx3q.json"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%;"
+                                loop
+                                autoplay>
+                            </lottie-player>
+                        </div>
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+                
+                <div class="about-right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="about-text">
+                        <h3>Tech Enthusiast & Future Engineer</h3>
+                        <p>
+                            Currently pursuing my 11th grade in PCM (Physics, Chemistry, Mathematics), 
+                            I'm laying the foundation for my engineering dreams. My passion for technology 
+                            drives me to constantly explore new frontiers in the digital world.
+                        </p>
+                        <p>
+                            When I'm not studying, you'll find me surfing the web, diving deep into 
+                            the latest tech trends, or creating content that inspires others. I believe 
+                            in the power of continuous learning and sharing knowledge with the community.
+                        </p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="stat-number">11th</div>
+                            <div class="stat-label">Grade (PCM)</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Skills</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Curiosity</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-hobbies">
+                        <h4>My Interests</h4>
+                        <div class="hobby-tags">
+                            <span class="hobby-tag" data-aos="fade-up" data-aos-delay="100">
+                                <span class="material-icons">web</span>
+                                Web Surfing
+                            </span>
+                            <span class="hobby-tag" data-aos="fade-up" data-aos-delay="200">
+                                <span class="material-icons">school</span>
+                                Knowledge Gaining
+                            </span>
+                            <span class="hobby-tag" data-aos="fade-up" data-aos-delay="300">
+                                <span class="material-icons">computer</span>
+                                Tech Enthusiasm
+                            </span>
+                            <span class="hobby-tag" data-aos="fade-up" data-aos-delay="400">
+                                <span class="material-icons">engineering</span>
+                                Engineering Dreams
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="section-subtitle">What I bring to the table</div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <span class="material-icons">code</span>
+                    </div>
+                    <h3>Basic Coding</h3>
+                    <p>Foundation in programming languages and development concepts. Always eager to learn new technologies and frameworks.</p>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%;"></div>
+                        </div>
+                        <span class="skill-percentage">65%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="skill-icon">
+                        <span class="material-icons">movie</span>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Creating engaging video content with professional editing techniques and storytelling skills.</p>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="skill-icon">
+                        <span class="material-icons">photo_camera</span>
+                    </div>
+                    <h3>Photo Editing</h3>
+                    <p>Transforming images with advanced editing techniques and creative vision for stunning visuals.</p>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="skill-icon">
+                        <span class="material-icons">create</span>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Crafting compelling content across various platforms with creativity and strategic thinking.</p>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="500">
+                    <div class="skill-icon">
+                        <span class="material-icons">play_circle_filled</span>
+                    </div>
+                    <h3>YouTube Creation</h3>
+                    <p>Mastery in YouTube content creation, from ideation to publishing and audience engagement.</p>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-aos="flip-left" data-aos-delay="600">
+                    <div class="skill-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3>Problem Solving</h3>
+                    <p>Analytical thinking and creative problem-solving approach to tackle complex challenges.</p>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My Vibes</h2>
+                <div class="section-subtitle">Music that fuels my creativity and coding sessions</div>
+            </div>
+            
+            <div class="music-content">
+                <div class="music-player-container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="player-header">
+                        <div class="player-title">
+                            <span class="material-icons">library_music</span>
+                            <h3>Coding & Creative Playlist</h3>
+                        </div>
+                        <div class="player-subtitle">Perfect beats for deep focus and inspiration</div>
+                    </div>
+                    
+                    <div class="spotify-embed">
+                        <div style="left: 0; width: 100%; height: 352px; position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-3);">
+                            <iframe 
+                                src="https://open.spotify.com/embed/playlist/6oeBLguzdZf8qm97www0R0?utm_source=oembed" 
+                                style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" 
+                                allowfullscreen 
+                                allow="clipboard-write *; encrypted-media *; fullscreen *; picture-in-picture *;">
+                            </iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="music-description" data-aos="fade-up" data-aos-delay="400">
+                        <div class="music-stats">
+                            <div class="music-stat">
+                                <span class="material-icons">headphones</span>
+                                <div>
+                                    <h4>Focus Mode</h4>
+                                    <p>Perfect for coding sessions</p>
+                                </div>
+                            </div>
+                            <div class="music-stat">
+                                <span class="material-icons">creative_mood</span>
+                                <div>
+                                    <h4>Creative Boost</h4>
+                                    <p>Inspiration for content creation</p>
+                                </div>
+                            </div>
+                            <div class="music-stat">
+                                <span class="material-icons">psychology</span>
+                                <div>
+                                    <h4>Study Vibes</h4>
+                                    <p>Background music for learning</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="music-note">
+                            <span class="material-icons">info</span>
+                            <p>This playlist is constantly updated with tracks that keep me motivated during late-night coding sessions and creative projects. Music is the fuel that powers my passion for technology! 🎵</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-subtitle">My creative endeavors</div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-image">
+                        <lottie-player
+                            src="https://assets5.lottiefiles.com/packages/lf20_qp1q7mct.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%; height: 100%;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tech Tutorial Videos</h3>
+                        <p>Educational content series covering programming basics, tech reviews, and tutorials for fellow students.</p>
+                        <div class="project-tags">
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">Education</span>
+                            <span class="tag">YouTube</span>
+                        </div>
+                        <button class="mdc-button mdc-button--outlined project-btn">
+                            <span class="mdc-button__label">
+                                <span class="material-icons">play_arrow</span>
+                                Watch Now
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <lottie-player
+                            src="https://assets1.lottiefiles.com/packages/lf20_w51pcehl.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%; height: 100%;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="project-content">
+                        <h3>Creative Photo Projects</h3>
+                        <p>Digital art and photo manipulation projects showcasing creative vision and technical skills.</p>
+                        <div class="project-tags">
+                            <span class="tag">Photo Editing</span>
+                            <span class="tag">Digital Art</span>
+                            <span class="tag">Creative</span>
+                        </div>
+                        <button class="mdc-button mdc-button--outlined project-btn">
+                            <span class="mdc-button__label">
+                                <span class="material-icons">photo_library</span>
+                                View Gallery
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-image">
+                        <lottie-player
+                            src="https://assets2.lottiefiles.com/packages/lf20_dmw1jyzr.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%; height: 100%;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                    </div>
+                    <div class="project-content">
+                        <h3>Learning Journey Blog</h3>
+                        <p>Documenting my learning experiences in tech, sharing insights and helping other students in their journey.</p>
+                        <div class="project-tags">
+                            <span class="tag">Content Creation</span>
+                            <span class="tag">Writing</span>
+                            <span class="tag">Education</span>
+                        </div>
+                        <button class="mdc-button mdc-button--outlined project-btn">
+                            <span class="mdc-button__label">
+                                <span class="material-icons">article</span>
+                                Read Blog
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-subtitle">Ready to collaborate and create something amazing</div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>
+                            I'm always excited to connect with fellow tech enthusiasts, students, 
+                            and anyone who shares a passion for learning and creating. Let's discuss 
+                            projects, share knowledge, or just chat about the latest in tech!
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <span class="material-icons">email</span>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>krish.student@email.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="material-icons">phone</span>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+91 98765 43210</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <span class="material-icons">location_on</span>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>India</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="100">
+                                <span class="material-icons">play_arrow</span>
+                            </a>
+                            <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="200">
+                                <span class="material-icons">camera_alt</span>
+                            </a>
+                            <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="300">
+                                <span class="material-icons">code</span>
+                            </a>
+                            <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="400">
+                                <span class="material-icons">work</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <div class="mdc-text-field mdc-text-field--outlined">
+                                    <input type="text" id="name" class="mdc-text-field__input" required>
+                                    <div class="mdc-notched-outline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label for="name" class="mdc-floating-label">Your Name</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="mdc-text-field mdc-text-field--outlined">
+                                    <input type="email" id="email" class="mdc-text-field__input" required>
+                                    <div class="mdc-notched-outline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label for="email" class="mdc-floating-label">Your Email</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="mdc-text-field mdc-text-field--outlined">
+                                    <input type="text" id="subject" class="mdc-text-field__input" required>
+                                    <div class="mdc-notched-outline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label for="subject" class="mdc-floating-label">Subject</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea">
+                                    <textarea id="message" class="mdc-text-field__input" rows="5" required></textarea>
+                                    <div class="mdc-notched-outline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label for="message" class="mdc-floating-label">Your Message</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="mdc-button mdc-button--raised animated-button submit-btn">
+                                <div class="mdc-button__ripple"></div>
+                                <span class="mdc-button__label">
+                                    <span class="material-icons">send</span>
+                                    Send Message
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">KRISH</span>
+                    </div>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2024 Krish. All rights reserved. | Designed with ❤️ and lots of ☕</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
